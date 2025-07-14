@@ -6,11 +6,12 @@
 }
 
 body {
-    font-family: "Roboto",sans-serif;
+    font-family:  'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    background: rgb(47, 95, 113);
 }
 
 h1,h2,h3,h4,h5,h6, strong{
-    color:#241f1f;
+    color:whitesmoke;
 }
 
 p {
@@ -19,27 +20,15 @@ p {
 }
 
 p, span, label, input, textarea, li{
-    color: rgb(100, 100, 100);
+    color: rgb(194, 194, 194);
 }
 
 a {
     text-decoration: none;
 }
-
-.main-container {
-    width: 1200px;
-    margin: 0 auto;
-}
-
-@media screen and(max-width:1200px) {
-    .main-container{
-        width: 90%;
-    }
-}
-
 .btn {
     padding: 1rem 1.5rem;
-    background: white;
+    background: whitesmoke;
     border: 1.5px solid grey;
     cursor: pointer;
     transition: 0.2s ease-in-out;
@@ -51,21 +40,21 @@ a {
 }
 
 .pre-title {
-    text-transform: uppercase;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     letter-spacing: 0.5rem ;
-    color: grey;
+    color: white;
     position: relative;
     padding-left: 40px ;
     width: fit-content;
     font-weight: 400 ;
-    font-size: 0.9rem ;
+    font-size: 1rem ;
 }
 
 .pre-title::before {
     content:"";
     width: 30px ;
     height: 1px ;
-    background: #241f1f;
+    background: whitesmoke;
     position: absolute;
     display: block;
     left: 0;
@@ -75,21 +64,27 @@ a {
 
 .grid-3{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
     gap: 3rem;
 }
 /*Logo dan Navigasi Menu*/
 
 .nav {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 2rem 2rem ;
+    padding: 0.8rem 6rem;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    background-color: #052232e4;
+   
 }
 
 .nav ul {
-    list-style: none;
     display: flex;
-    gap: 3rem;
+    gap: 20px;
+    
 }
 
 .logo {
@@ -100,97 +95,118 @@ a {
 }
 
 .logo a {
-    color: rgb(0, 0, 0);
+    color: whitesmoke;
 }
 
 nav ul li {
     display: flex;
     align-items: center;
-    gap:1.5rem;
+    gap:2rem;
 }
 
 nav ul li a {
-    color: black;
+    color: white;
+}
+nav ul li a:hover {
+    color: steelblue;
 }
 
 .burger div {
     width: 25px;
     height: 2px;
-    background-color: #000;
+    background-color: white;
     margin: 7px;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     z-index: 99;
 }
 
 .burger {
     display: none;
     z-index: 99;
-    position: fixed;
     top: 3px;
     right: 35px;
+    cursor: pointer;
 
 }
-
+#heros {
+    padding: 8rem 2rem;
+}
 .hero {
-    height: 720px ;
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    align-items: center;
-    padding: 2rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 .hero-name {
-    font-size: 2rem ;
+    font-size: 50px ;
     font-weight: 700 ;
-    margin: 0.5rem 0 1rem;
 }
 
 .hero-name span {
-    color: steelblue;
+    color: black;
+}
+.hero-left{
+  padding-left: 2rem;
 }
 
+.cv{
+  margin: 1rem;
+  width: 100px;
+  background-color: rgb(13, 30, 36);
+  padding:0.5rem 1rem;
+  border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    font-weight: 600;
+}
+.cv a{
+  color: whitesmoke;
+}
+.cv:hover{
+  background-color: steelblue;
+}
+.hero-right img:hover{
+  transform: scale(1.1);
+}
 .hero-right img{
-    width: 90%;
+  width: 90%;
+  transition: all 0.3s ease-in-out;
 }
-
 .hero-right {
-    display: flex;
-    justify-content: center;
+   display: flex;
+   justify-content: center;
 }
 
 /*Service*/
 
-.services {
-    background-color:whitesmoke;
-    padding: 6rem 2rem;
+#services {
+    background-color:rgb(13, 30, 36);
+    padding:6rem 2rem;
 }
 
 .pre-title {
-    margin: 0 auto;
+    margin: 0;
 }
-
-.services-title {
-    text-align: center;
+.my-service{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;  
+  gap: 0.5rem;
 }
-
 .service {
-    padding: 3rem 2rem;
-    text-align: center;
-    background: white;
+    transition: all ease-in-out 0.3s;
     border-radius: 0.7rem;
 }
-
-.service h4 {
-    margin: 1.5rem 0;
-    font-weight: 500;
-    font-size: 1.05rem;
+.service:hover{
+  transform: scale(1.1);
 }
-
 .service-icon {
-    width: fit-content;
-    background: lightgrey;
+    padding: 2rem;
+    background: rgb(47, 95, 113);
     margin: 0 auto;
-    padding: 1rem 1.3rem;
     border-radius: 0.5rem;
 }
 
@@ -199,18 +215,19 @@ nav ul li a {
 }
 
 /* Portfolios */
-.portfolios {
+#portfolios {
     padding: 6rem 2rem;
   }
   
   .portfolio {
     border-radius: 0.7rem;
     overflow: hidden; /* supaya gambar yang diatas itu dia ngikut border radiusnya, karena yang dikasih border radius disini adalah div portfolio ini */
-    border: 1px solid lightgrey;
+    border: 1px solid grey;
+    background-color: rgb(13, 30, 36);
   }
   
   .portfolio-cover {
-    height: 250px;
+    height: auto;
   }
   
   .portfolio img {
@@ -244,27 +261,22 @@ nav ul li a {
   }
   
   .portfolio-tags {
-    display: flex;
+    display: flex; 
     gap: 1rem;
     margin: 1rem 0;
   }
   
   .portfolio-tags div {
     font-size: 0.9rem;
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 0.4rem 1rem;
-    color: grey;
+    font-weight: 700;
+    color: steelblue;
+    background-color:whitesmoke;
   }
-  
-  .portfolio-tags div {
-    font-size: 0.9rem;
-    border: 1px solid lightgray;
-    padding: 0.4rem 1rem;
-    color: grey;
-  }
-.skills {
+#skills {
     padding: 6rem 2rem;
-    background: whitesmoke;
+    background: rgb(13, 30, 36);
   }
   
   .skills-grid {
@@ -312,7 +324,7 @@ nav ul li a {
   /* Right side of Skills */
   .skills-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:repeat(auto-fit, minmax(350px, 1fr));;
     margin-top: 1.5rem;
   }
   
@@ -322,7 +334,7 @@ nav ul li a {
   }
   
   /* Contact Section */
-  .contact {
+  #contacts{
     padding:6rem 2rem;
   }
   
@@ -350,7 +362,7 @@ nav ul li a {
   
   .contact-form input::placeholder,
   .contact-form textarea::placeholder {
-    color: #9d9fa1;
+    color: steelblue;
   }
   
   .contact-form input:focus,
@@ -362,7 +374,7 @@ nav ul li a {
   .btn-submit {
     width: 100%;
     padding: 0.75rem 1.3rem;
-    background-color:steelblue;
+    background-color:rgb(56, 156, 36);
     color:lightgrey;
     border: none;
     border-radius: 3px;
@@ -402,8 +414,8 @@ nav ul li a {
   
   /* Footer Section */
   footer {
-    padding: 4rem 0;
-    background: whitesmoke;
+    padding: 1rem 0;
+    background: rgb(13, 30, 36);
     text-align: center;
   }
   
@@ -416,9 +428,202 @@ nav ul li a {
   }
   
   .footer-icons svg {
-    fill: #3e3f40;
+    fill: whitesmoke;
+    transition: inherit 2s;
   }
   
   .footer-icons a:hover svg {
     fill: #000;
   }
+
+  @media screen and (max-width: 768px) {
+    .main-container{
+      width: 100%;
+    }
+    .burger{
+      display: block;
+    }
+    .burger.toggle .line-1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.toggle .line-2 {
+  opacity: 0;
+}
+
+.burger.toggle .line-3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+.nav{
+  padding: 0.8rem 1rem;
+}
+    .nav ul{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0.001px;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+    background-color: #052232e4;
+    height: 300px;
+    }
+    .nav ul.active{
+      display: flex;
+    }
+    .nav ul li{
+      display: flex;
+      flex-direction: column;
+      
+    }
+    .nav ul li a{
+      padding:0.5rem;
+    }
+    .logo{
+      font-size: 1.5rem;
+    }
+    #heros{
+      display: flex;
+      min-height: 100vh;
+    }
+    .hero{
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .hero-left{ 
+      padding: 0.5rem;
+      justify-items: center;
+    }
+    .hero-left p{
+      font-size: 0.5rem;
+    }
+    .pre-title{
+      padding: 0;
+      font-size: 0.5rem;
+      letter-spacing: 0.25rem;
+    }
+    .pre-title::before{
+      content: none;
+    }
+    .hero-name{
+      font-size: 1.5rem;
+    }
+    .cv{
+      margin: 0;
+      font-size: 0.5rem;
+      width: fit-content;
+    }
+    
+    .hero-right{
+      padding:0;
+      width: 100%;
+    }
+    .hero-right img{
+    width: 70%;
+    }
+    #heros{
+      padding:4rem 0;
+    }
+    #services{
+      padding-top: 2rem;
+    }
+    .service-icon{
+      padding:0.3rem;
+    }
+    #portfolios{
+      padding-top: 2rem;
+    }
+    .portfolio-cover{
+      height: auto;
+    }
+    .portfolio-tags{
+      width: 100%;
+    }
+    .portfolio-tags div{
+      font-weight: 600;
+      padding: 0.5rem;
+      font-size: 0.6rem;
+    }
+    .portfolio-info p{
+      font-size: 0.75rem;
+    }
+    .section-title{
+      font-size: 1.5rem;
+    }
+    #skills{
+      padding-top: 2rem;
+    }
+    .skills-grid{
+      display: flex;
+      flex-direction: column;
+    }
+    .skills-left{
+      width: 100%;
+    }
+    
+    .education-info h4{
+      font-size: 0.8rem;
+    }
+    .education-info p{
+      font-size: 0.75rem;
+    }
+    .skills-right{
+      width: 100%;
+    }
+    .skills-right p{
+      font-size: 0.75rem;
+    }
+    .skills-list{
+      font-size: 0.75rem;
+    }
+    .skills-list ul{
+      width: fit-content;
+      line-height: 1.5rem;
+    }
+    #contacts{
+      padding: 2rem 1rem;
+    }
+    .contact{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+    .contact-left{
+      width: 50%;
+    }
+    .contact-form input,
+    .contact-form textarea{
+      font-size: 0.5rem;
+      padding: 0.5rem;
+    }
+    .contact-form div{
+      margin: 0.2rem;
+    }
+    .btn-submit{
+      padding: 0 0.75rem ;
+      font-size: 0.5rem;
+      height: 15px;
+    }
+    .contact-item-icon{
+      width: 25px;
+      height: 25px;
+    }
+    .contact-item-icon svg{
+      width: 50%;
+    }
+    .contact-item{
+      padding: 0;
+      gap: 10px;
+      margin: 0;
+    }
+    .contact-item-detail h4,p{
+      font-size: 0.5rem;
+      margin: 0;
+    }
+    .contact-right{
+      padding-top: 0.5rem;
+    }
+    }
